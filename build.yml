@@ -5,7 +5,7 @@ steps:
       - cp
       - -r
       - .
-      - gs://artifacts.$PROJECT_ID.appspot.com/artifacts/$BRANCH_NAME
+      - gs://artifacts.$PROJECT_ID.appspot.com/artifacts/$BRANCH_NAME/$REPO_NAME
   - name: gcr.io/cloud-builders/gsutil
     args:
       - -mq

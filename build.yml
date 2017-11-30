@@ -4,7 +4,7 @@ steps:
       - -mq
       - cp
       - -r
-      - gs://artifacts.$PROJECT_ID.appspot.com/containers/.m2
+      - gs://artifacts.$PROJECT_ID.appspot.com/artifacts/$BRANCH_NAME/.m2
       - .
   - name: gcr.io/cloud-builders/mvn
     args:
@@ -17,4 +17,4 @@ steps:
       - cp
       - -rn
       - .m2
-      - gs://artifacts.$PROJECT_ID.appspot.com/containers
+      - gs://artifacts.$PROJECT_ID.appspot.com/artifacts/$BRANCH_NAME
